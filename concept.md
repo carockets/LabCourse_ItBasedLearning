@@ -3,7 +3,7 @@
 
 Timetable
 
-| *week *	| *dates* 			| *to do* 									| *hours* |
+| *week*	| *dates* 			| *to do* 									| *hours* |
 |---|---|---|---|
 | 1 	| 20.04. - 26.04. 	| concept and time estimation 				| 15 	| 
 | 2 	| 27.04. - 03.05. 	| drawing storyboard and python introduction| 25 	|
