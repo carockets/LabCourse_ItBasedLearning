@@ -16,6 +16,13 @@ Unfortunatley the hero is not fast/strong/talented enough to succeed, so the und
 * After starting the game one has to choose the main character (male/femeale) and enter a name.
 * The player will be presented a short summary of the plot and get to know what his/her tast will be.
 * The player has to modify the source code of the game so that the main character will be able to rescue the snake 
+Examples for this are: 
+* implementing a function that allows the character to run continously (e.g. through a while-clause)
+* implementing a function that allows the character to jump
+* implementing a function that allows the character to run
+* implementing various attributes and setting them to different values (e.g. ability to swim = true...)
+* implementing a new additional object (e.g. coins)
+* implementing a new object/function/attribute that helps the player to get across obstacles 
 
 ### Goals
 The students will get an introduction to computer programming with python.
@@ -32,7 +39,7 @@ The following time table shows the work which has to be done during the next wee
 | *week*	| *dates* 			| *to do* 									| *hours* |
 |---|---|---|---|
 | 1 	| 20.04. - 26.04. 	| planning, concept and time estimation 				| 15 	| 
-| 2 	| 27.04. - 03.05. 	| drawing storyboard and python introduction| 25 	|
+| 2 	| 27.04. - 03.05. 	| drawing storyboard + concept art and python introduction| 25 	|
 | 3 	| 04.05. - 10.05. 	| get to know python and pygame 			| 25 	| 
 | 4 	| 11.05. - 17.05. 	| set up tooling (vcs, ide,...) + start of implementation	| 20 	|
 | 5 	| 18.05. - 24.05. 	| implementation 							| 25 	|
