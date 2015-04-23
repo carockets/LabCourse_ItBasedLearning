@@ -43,7 +43,7 @@ The following time table shows the work which has to be done during the next wee
 | 3 	| 04.05. - 10.05. 	| get to know python and pygame 			| 25 	| 
 | 4 	| 11.05. - 17.05. 	| set up tooling (vcs, ide,...) + start of implementation	| 20 	|
 | 5 	| 18.05. - 24.05. 	| implementation 							| 25 	|
-| 6 	| 25.05. - 31.05. 	| fist result check (test what has been done so far, readjust concept and plan) | 25 	|
+| 6 	| 25.05. - 31.05. 	| first result check (test what has been done so far, readjust concept and plan) | 25 	|
 | 7 	| 01.06. - 07.06. 	| implementation | 25 |
 | 8 	| 08.06. - 14.06. 	| implementation 							| 25 	|
 | 9 	| 15.06. - 21.06. 	| testing + Bug fixes 							| 25 	|
