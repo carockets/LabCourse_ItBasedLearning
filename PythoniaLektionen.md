@@ -125,12 +125,13 @@ print liste[2]
 
 ###Lektion 5 — Funtkionen mit Listen
 ####Einführung
-Für die manipulation von Listen haben wir folgende Möglichkeiten:
-| Funktion | Ergebnis |
-|---------|-----------|
+Für die Manipulation von Listen haben wir folgende Möglichkeiten:
+
+| Funktion| Ergebnis|
+|---|---|
 |liste.len | gibt die Länge der liste zurück |
 |liste.del(index) | löscht den angegebenen Index aus der liste |
-|liste.append(x)| fügt x an die Liste an (alternativ kann man auch `+` verwenden|
+|liste.append(x)| fügt x an die Liste an (alternativ kann man auch `+` verwenden)|
 |liste.extend([8,69])| fügt mehrere elemente an die Liste an|
 |liste.remove(x)| entfernt x aus der liste|
 |liste.index(x)| gibt den index von x in der liste zurück|
