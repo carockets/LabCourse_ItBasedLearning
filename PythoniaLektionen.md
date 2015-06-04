@@ -13,7 +13,7 @@ print “Hello World”
 ```
 ####Aufgaben
 |Lernziel | Umsetzung |Zeitaufwand |
-|— |— | — |
+|---------|-----------|------------|
 |Die Schüler lernen wie sich Texte im Programm ausgeben lassen| Lasse deinen Namen mit dem Text “Hallo, mein Name ist …” ausgeben |5 min|
 ####Lösungsbeispiel
 ```python
@@ -35,7 +35,7 @@ Das Zeichen ‘=’ ist in diesem Sinne als Zuweisung zu verstehen. Wir sagen al
 Bei der Programmierung können Variablen nicht nur die Werte von Zahlen haben, sondern zum Beispiel auch eine Zeichenkette (eng. string) symbolisieren. Die Werte, die eine Variable annehmen kann werden in so genannten **Datentypen** kategorisiert. Die folgende Tabelle beinhaltet die wichtigsten und Beispiele, wie sie in Python geschrieben werden.
 
 |Datentyp | Code Beispiel |
-|—|—|
+|---------|-----------|
 | Ganze Zahlen (Integer)| `x = 3, y = 42, z = -7` |
 | Fließkommazahlen (Floats) | `i = 3.1415, j = -89.34279` |
 | Zeichenketten (Strings) | `text = “Hello World”` |
@@ -45,7 +45,7 @@ Boolsche Variablen sind beim Programmieren sehr wichtig. Sie können nur die Wer
 
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
-|— |— | — |
+|---------|-----------|------------|
 |Eine Integer Variable anlegen und den Wert auf dem Bildschrim ausgeben lassen|Lege nun selbst eine Variable mit dem Namen ‘Zahl’ an, die den Wert 5 hat, und lasse anschließend, den Wert auf dem Bildschirm ausgeben |4 min|
 |Variablen gegenseitig zuweisen |Lege eine zweite Variable mit dem Namen ‘pi’ an und gib ihr den Wert 3.1415. Anschließend weise der Variable ‘pi’ den Wert von ‘zahl’ zu |2 min|
 |Variablen mit Zeichenketten anlegen| | 2 min|
@@ -68,7 +68,7 @@ Wenn ein Programm von einem Computer ausgeführt wird, dann wird vor allem viel 
 Die folgende Tablle zeigt Beispiele hierfür in Python:
 
 |Operation | Code Beispiel |
-|—|—|
+|---------|-----------|
 | Addition | `x = 3 + 7.2355, y = -89 + 1732` |
 | Subtraktion | `i = 3.1415 - 14.56, j = -89.34279 - 7` |
 | Multiplikation | `quadrat = 42 * 42` |
@@ -90,7 +90,7 @@ wiederhole = “drei” * 3		# ergibt “dreidreidrei”
 ```
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
-|— |— | — |
+|---------|-----------|------------|
 ||  ||
 
 ####Lösungsbeispiel
@@ -101,7 +101,7 @@ wiederhole = “drei” * 3		# ergibt “dreidreidrei”
 Manchmal kann es sehr nützlich sein, im Code Erklärungen hinzuzufügen, damit andere Leute verstehen, was der Code tut oder was sich der Programmierer dabei gedacht hat. Dieser Text soll natürlich bei der Ausführung des Programmes vom Computer ignoriert werden. Kommentare werden in Python mit dem Symbol `#` eingeleitet. Sofern dieses Symbol auftaucht, wird der restliche Text in dieser Zeile vom Computer ignoriert. Als Beispiel hierfür kannst du dir nochmal das obige Code Beispiel anschauen.
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
-|— |— | — |
+|---------|-----------|------------|
 ||  ||
 
 ###Lektion 4 — Listen
@@ -118,7 +118,7 @@ print liste[2]
 ```
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
-|— |— | — |
+|---------|-----------|------------|
 ||  ||
 
 ####Lösungsbeispiel
@@ -127,7 +127,7 @@ print liste[2]
 ####Einführung
 Für die manipulation von Listen haben wir folgende Möglichkeiten:
 | Funktion | Ergebnis |
-| — | — |
+|---------|-----------|
 |liste.len | gibt die Länge der liste zurück |
 |liste.del(index) | löscht den angegebenen Index aus der liste |
 |liste.append(x)| fügt x an die Liste an (alternativ kann man auch `+` verwenden|
@@ -137,7 +137,7 @@ Für die manipulation von Listen haben wir folgende Möglichkeiten:
 |liste.insert(index, x)| fügt x in die liste am gegebenen index ein|
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
-|— |— | — |
+|---------|-----------|------------|
 ||  ||
 
 ####Lösungsbeispiel
@@ -157,7 +157,7 @@ else:
 Nach dem wort `if` (‘wenn’) folgt immer eine Bedingung die ausgewertet wird. Ist diese wahr (`true`) so wird der code ausgeführt, der direkt im anschluss folgt. Ist die Bedingung falsch (`false`), so wird der Teil hinter dem wort `else` (‘sonst’) ausgeführt.
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
-|— |— | — |
+|---------|-----------|------------|
 ||  ||
 
 ####Lösungsbeispiel
@@ -176,7 +176,7 @@ for zahl in liste
 ```
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
-|— |— | — |
+|---------|-----------|------------|
 ||  ||
 
 ####Lösungsbeispiel
@@ -209,7 +209,7 @@ In unserem obigen Beispiel ist die Definition ist der Code, aus welchem die Funk
 Der Rückgabewert befindet sich hinter dem `return` statement gekennzeichnet.
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
-|— |— | — |
+|---------|-----------|------------|
 ||  ||
 
 ####Lösungsbeispiel
