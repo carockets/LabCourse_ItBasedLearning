@@ -62,7 +62,7 @@ zahl = pi
 
 ###Lektion 2 — Arithmetik
 ####Einführung
-Nachdem du nun schon das Thema Variablen gemeistert hast, wird es für dich ein leichtes sein mit de Computer ein bisschen zu rechnen.
+Nachdem du nun schon das Thema Variablen gemeistert hast, wird es für dich ein leichtes sein ein bisschen mit dem Computer zu rechnen.
 Wenn ein Programm von einem Computer ausgeführt wird, dann wird vor allem viel gerechnet. Am meisten verwenden wir beim Programmieren die Addition, Subtraktion, Multiplikation und Division.
 
 Die folgende Tablle zeigt Beispiele hierfür in Python:
@@ -98,6 +98,7 @@ wiederhole = “drei” * 3		# ergibt “dreidreidrei”
 ##Unit 2
 ###Lektion 3 — Kommentare
 ####Einführung
+Mit den Rechenoperationen hast du nun eigentlich schon das wichtigste gelernt. An dieser Stelle wollen wir uns einem anderen, auch sehr wichtigem Thema annehmen -- Kommentaren.
 Manchmal kann es sehr nützlich sein, im Code Erklärungen hinzuzufügen, damit andere Leute verstehen, was der Code tut oder was sich der Programmierer dabei gedacht hat. Dieser Text soll natürlich bei der Ausführung des Programmes vom Computer ignoriert werden. Kommentare werden in Python mit dem Symbol `#` eingeleitet. Sofern dieses Symbol auftaucht, wird der restliche Text in dieser Zeile vom Computer ignoriert. Als Beispiel hierfür kannst du dir nochmal das obige Code Beispiel anschauen.
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
@@ -106,6 +107,7 @@ Manchmal kann es sehr nützlich sein, im Code Erklärungen hinzuzufügen, damit 
 
 ###Lektion 4 — Listen
 ####Einführung
+Mit Kommentaren selbst kannst du natürlich nichts programmieren, deswegen nehmen wir uns jetzt wieder einem sehr essentiellem Thema an, und zwar Listen.
 Listen sind besondere Datenstrukturen. In ihnen können mehrere Werte gespeichert werden. Der Zugriff auf diese Werte erfolgt mit einem Index (die Stelle in der Liste,  an der der Wert gespeichert ist — beginnend bei 0). Eine Liste wird mit `[]` definiert:
 
 ```python
@@ -125,7 +127,7 @@ print liste[2]
 
 ###Lektion 5 — Funtkionen mit Listen
 ####Einführung
-Für die Manipulation von Listen haben wir folgende Möglichkeiten:
+Hoffentlich hast du gemerkt, dass Listen an sich gar nicht schwer sind. Natürlich wäre es ziemlich sinnlos, wenn wir nur Listen anlegen, aber nichts mit ihnen tun könnten. Deswegen lernst du jetzt Möglichkeiten, wie du mit Listen coole Dinge machen kannst. Für die Manipulation von Listen haben wir folgende Möglichkeiten:
 
 | Funktion| Ergebnis|
 |---|---|
@@ -146,6 +148,7 @@ Für die Manipulation von Listen haben wir folgende Möglichkeiten:
 ##Unit 3
 ###Lektion 6 — Kontrollstrukturen (Verzweigung)
 ####Einführung
+Herzlichen Glückwunsch - du hast nun schon ein ganz schönes Stück Arbeit hinter dir! Zeit für eine kleine Verschnaufpause. Trink einen Schluck und Streck dich einmal, dann gehts weiter mit dem spannenden Themenkomplex der Kontrollstrukturen. Was das genau ist erfährst du jetzt:
 In einem Programm möchte man oftmals in Abhängigkeit von einer bestimmten Bedingung weiter verfahren. Wir könnten zum Beispiel ein Programm schreiben, welches einen Fahrkartenautomaten simuliert. Wenn ein Kunde eine Fahrkarte kauft, so müssen wir entscheiden ob (und wieviel) Wechselgeld er bekommt. Wenn der Wert des eingeworfenen Geldes genau mit dem Wert der Fahrkarte übereinstimmt, so bekommt er kein Wechselgeld, wenn zuviel eingeworfen wurde, dann ja. In Python können wir diesen Sachverhalt mit `if` und `else` abbilden:
 
 ```python
@@ -165,7 +168,8 @@ Nach dem wort `if` (‘wenn’) folgt immer eine Bedingung die ausgewertet wird.
 
 ###Lektion 7 — Kontrollstrukturen (Schleifen)
 ####Einführung
-Oftmals möchte man Code wiederholt ausführen — hierfür verwenden Programmierer sogenannte Schleifen (engl. ‘loops’).
+Verzweigungen waren gar nicht so schwer, oder?
+Oftmals möchte man jedoch auch Code wiederholt ausführen — hierfür verwenden Programmierer sogenannte Schleifen (engl. ‘loops’).
 
 Im vorherigen Kapitel haben wir schon das Konstrukt der Liste kennengelernt. Angenommen wir haben eine Liste mit ganzzahligen werten und möchten zu jedem Wert 1 addieren, dann sähe das wie folgt aus:
 
@@ -185,6 +189,7 @@ for zahl in liste
 ##Unit 4
 ###Lektion 8 — Funktionen
 ####Einführung
+Wow, du kannst Stolz auf dich sein, dass du schon bis hierhin gekommen bist. Nun folgt der letzte Teil unserer Reise, an dem es um Funktionen geht -- quasi die Masterclass beim programmieren lernen.
 Mit Hilfe von Funktionen lässt sich der Quellcode eines Programms strukturieren und wiederverwenden. Angenommen wir schreiben ein Programm, welches an mehreren Stellen die Summe von Werten in einer Liste bilden muss. Der dazugehörige Code wäre folgender:
 ```python
 summe = 0
