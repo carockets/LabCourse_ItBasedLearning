@@ -1,0 +1,31 @@
+Fixed:
+- Münz-Sound nicht aus wenn Musik ausgestellt ist # Fix: sound_coin.play in if-clause gepackt. 
+- Musik Button zeigt nicht ob Musik gerade an oder aus ist. # Fix: Musik Button erweitert um Music on / Music off je nach state. 
+- Gegner Anzahl ist auf 1 begrenzt, feste Gegner-Methoden für 1 Gegner # Gegner Methoden umgewandelt auf list-checks
+
+Current:
+- Neues Fenster Sound nicht aus wenn Musik ausgestellt ist 
+
+- Hitbox an die Gegner Grafik anpassen! (Wenn diese da ist)
+
+- Münzbelohnung für die Lektion nur nach erfolgreichem Abschluss der Lektionen
+
+- Manchmal verliert man Geld wenn man stirbt # Konnte noch nicht reproduziert werden. 
+
+
+Aufgaben:
+
+- Datenfluss zwischen den zwei Fenstern herstellen bei aufruf und Beenden des Code-Fensters. 
+- Herz Grafik bearbeiten
+- Münzgrafik des Counters bearbeiten 
+
+Implementiert 2.6.2015:
++ Herz zum einsammeln möglich 
++ Mehrere Herzen zum einsammeln möglich 
++ Münzgrafik statt Schriftzug beim Counter 
++ Mehrere Gegner möglich
+
++ "Check code" Funktion implementiert
++ Neues Text Fenster im CodeFenster
++ Kommandozeile implementiert
+
