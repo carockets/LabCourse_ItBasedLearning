@@ -202,9 +202,14 @@ for zahl in liste
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
 |---------|-----------|------------|
-||  ||
+|Die Schüler lernen Elemente in einer Liste mittels einer Schleife zu bearbeiten|Monty ist nach stundenlanger Fahrt endlich bei Brian angekommen (die Bahn hatte mal wieder Verspätung). Nun möchte er seinen Koffer auspacken. Lege eine Variable 'kleiderschrank' an und füge ihr alle Gegenstände aus der Gepäck-Liste hinzu. **Tip**: eine leere Liste kannst du mit [] anlegen|5 min|
 
 ####Lösungsbeispiel
+```python
+kleiderschrank = []
+for gegenstand in gepaeck
+    kleiderschrank.append(gegenstand)
+```
 
 ##Unit 4
 ###Lektion 8 — Funktionen
@@ -236,6 +241,9 @@ Der Rückgabewert befindet sich hinter dem `return` statement gekennzeichnet.
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
 |---------|-----------|------------|
-||  ||
+http://www2.in.tum.de/hp/file?fid=1252
 
 ####Lösungsbeispiel
+```python
+for x in gepaeck
+```
