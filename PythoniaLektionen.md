@@ -30,7 +30,7 @@ Variablen erfüllen bei der Programmierung genau den gleichen Zweck wie in der M
 x = 5 
 ```
 
-Das Zeichen ‘=’ ist in diesem Sinne als Zuweisung zu verstehen. Wir sagen also “der Variablen x wird der Wert 5 zugewiesen”. Name einer Variablet kann beliebig gewählt werden bis auf die so genannten reservierten wörter, die es in jeder Programmiersprache gibt. Diese  haben eine spezielle Bedeutung und dürfen nicht als Variablen Bezeichner verwendet werden, da es sonst zu Konflikten kommt. Eine Liste mit der reservierten Wörter in Python ist [hier](https://docs.python.org/2.5/ref/keywords.html) zu finden.
+Das Zeichen ‘=’ ist in diesem Sinne als Zuweisung zu verstehen. Wir sagen also “der Variablen x wird der Wert 5 zugewiesen”. (Für einen Vergleich verwenden wir das doppelte ist-gleich, also "=="). Der Name einer Variablet kann beliebig gewählt werden bis auf die so genannten reservierten wörter, die es in jeder Programmiersprache gibt. Diese  haben eine spezielle Bedeutung und dürfen nicht als Variablen Bezeichner verwendet werden, da es sonst zu Konflikten kommt. Eine Liste mit der reservierten Wörter in Python ist [hier](https://docs.python.org/2.5/ref/keywords.html) zu finden.
 
 Bei der Programmierung können Variablen nicht nur die Werte von Zahlen haben, sondern zum Beispiel auch eine Zeichenkette (eng. string) symbolisieren. Die Werte, die eine Variable annehmen kann werden in so genannten **Datentypen** kategorisiert. Die folgende Tabelle beinhaltet die wichtigsten und Beispiele, wie sie in Python geschrieben werden.
 
@@ -184,9 +184,24 @@ Nach dem wort `if` (‘wenn’) folgt immer eine Bedingung die ausgewertet wird.
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
 |---------|-----------|------------|
-|Die Schüler lernen die Anwendung eines if/else Konstrukts|Monty möchte gerne noch ein Geschenk für Brian mitbringen. Er überlegt ob er lieber einen Strauß Blumen oder eine Tafel von Brians Lieblingsschokolade kaufen soll. Die Tafel Schokolade kostet 2 Euro und der Blumenstrauß 5 Euro. Lege 2 Variablem 'Blumenstrauß' und 'Schokolade' an, welche den Preis der Gegenstände speichern. Zusätzlich noch eine Variable 'Taschengeld', welche den Betrag in Monty's Geldbeutel speichert, welcher 10 Euro beträgt. Dann finde mittels eines if/else Konstrukts heraus ob Monty Blumen, Schokolade oder sogar beides kaufen kann. Gebe auf dem Bildschrim die Gegenstände aus, die Monty kauft.|5 min|
+|Die Schüler lernen die Anwendung eines if/else Konstrukts|Monty möchte gerne noch ein Geschenk für Brian mitbringen. Er überlegt ob er lieber einen Strauß Blumen oder eine Tafel von Brians Lieblingsschokolade kaufen soll. Die Tafel Schokolade kostet 2 Euro und der Blumenstrauß 5 Euro. Lege 2 Variablen 'blumenstrauß' und 'schokolade' an, welche den Preis der Gegenstände speichern. Zusätzlich noch eine Variable 'taschengeld', welche den Betrag in Monty's Geldbeutel speichert, welcher 10 Euro beträgt. Dann finde mittels eines if/else Konstrukts heraus ob Monty Blumen, Schokolade oder sogar beides kaufen kann. Gebe auf dem Bildschrim die Gegenstände aus, die Monty kauft und wieviel Geld er danach noch übrig hat.|5 min|
 
 ####Lösungsbeispiel
+```python
+blumenstrauß = 5
+schokolade = 2
+taschengeld = 10
+
+if taschengeld > blumenstrauß
+    print('Blumenstrauß')
+    taschengeld = taschengeld - blumenstrauß
+if taschengeld > schokolade
+    print('Schokolade')
+    taschengeld = taschengeld - schokolade
+print('taschengeld')
+
+
+```
 
 ###Lektion 7 — Kontrollstrukturen (Schleifen)
 ####Einführung
