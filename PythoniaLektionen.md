@@ -241,9 +241,13 @@ Der Rückgabewert befindet sich hinter dem `return` statement gekennzeichnet.
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
 |---------|-----------|------------|
-http://www2.in.tum.de/hp/file?fid=1252
+|Die Schüler lernen eine Funktion mit Rückgabewert zu schreiben|Da Monty mehrere Fahrten zu Brian kaufen musste wird er wohl häufiger sein Gepäck in den Kleiderschrank räumen. Schreibe eine Funktion mit dem Namen 'auspacken', die eine Gepäck-Liste übergeben bekommt und den Inhalt des Kleiderschranks zurückgibt und überprüfe ihre Funktion mit einer neuen Gepäck-Liste|10 min|
 
 ####Lösungsbeispiel
 ```python
-for x in gepaeck
+def auspacken(gepaeck)
+    kleiderschrank = []
+    for gegenstand in gepaeck
+        kleiderschrank.append(gegenstand)
+    return kleiderschrank
 ```
