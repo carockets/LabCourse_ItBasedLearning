@@ -48,8 +48,8 @@ Boolsche Variablen sind beim Programmieren sehr wichtig. Sie können nur die Wer
 |---------|-----------|------------|
 |Eine Integer Variable anlegen und den Wert auf dem Bildschrim ausgeben lassen|Lege nun selbst eine Variable mit dem Namen ‘Zahl’ an, die den Wert 5 hat, und lasse anschließend, den Wert auf dem Bildschirm ausgeben |4 min|
 |Variablen gegenseitig zuweisen |Lege eine zweite Variable mit dem Namen ‘pi’ an und gib ihr den Wert 3.1415. Anschließend weise der Variable ‘pi’ den Wert von ‘zahl’ zu |2 min|
-|Variablen mit Zeichenketten anlegen| | 2 min|
-|Boolsche Variablen anlegen | | 2 min|
+|Variablen mit Zeichenketten anlegen|Lege eine Variable 'text' an und speichere in ihr "Python ist cool == " | 2 min|
+|Boolsche Variablen anlegen |Lege eine Variable 'wahr' an und gib ihr den Wert 'True'. Lasse die Variable 'text' und 'wahr' hintereinander ausgeben| 2 min|
 
 ####Lösungsbeispiel
 ```python
@@ -58,6 +58,12 @@ print ‘zahl’
 
 pi = 3.1415
 zahl = pi
+
+text = "Python ist cool == "
+wahr = True
+
+print(text)
+print(wahr) 
 ```
 
 ###Lektion 2 — Arithmetik
