@@ -130,7 +130,10 @@ print liste[2]
 |Die Schüler lernen eine Liste anzulege und auszugeben|Monty hat nun seine Fahrkarten gekauft und muss jetzt seinen Koffer packen. Er will folgende Dinge mitnehmen: Eine Hose, ein Hemd, eine Jacke, Socken, Schuhe und natürlich seine Zahnbürste. Lege eine Variable mit dem Namen 'gepaeck' an und füge sämtliche Gegenstände hinzu. Lasse anschließend die Liste auf dem Bildschirm ausgeben|3 min|
 
 ####Lösungsbeispiel
-
+```python
+gepack = [Hose, Hemd, Jacke, Socken, Schuhe, Zahnbürste]
+print(gepaeck)
+```
 ###Lektion 5 — Funtkionen mit Listen
 ####Einführung
 Hoffentlich hast du gemerkt, dass Listen an sich gar nicht schwer sind. Natürlich wäre es ziemlich sinnlos, wenn wir nur Listen anlegen, aber nichts mit ihnen tun könnten. Deswegen lernst du jetzt Möglichkeiten, wie du mit Listen coole Dinge machen kannst. Für die Manipulation von Listen haben wir folgende Möglichkeiten:
@@ -153,6 +156,14 @@ Hoffentlich hast du gemerkt, dass Listen an sich gar nicht schwer sind. Natürli
 |Die Schüler lernen den Index eines Elements aus einer Liste herauszufinden|Unterwegs fragt sich Monty ob der denn auch an seine Socken gedacht hat. Lege eine Variable mit dem Namen 'socken' an, welche den Index des Elements 'Socken' aus der Gepäck-Liste speichert|2 min|
 
 ####Lösungsbeispiel
+```python
+gewicht = gepaeck.len * 400
+gepaeck.remove('Jacke')
+gepaeck.append('Badehose')
+gepaeck.append('Badelatschen')
+gepaeck.append('Taucherbrille')
+socken = gepaeck.index('Socken')
+```
 
 ##Unit 3
 ###Lektion 6 — Kontrollstrukturen (Verzweigung)
