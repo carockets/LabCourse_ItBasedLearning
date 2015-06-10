@@ -182,7 +182,7 @@ Nach dem wort `if` (‘wenn’) folgt immer eine Bedingung die ausgewertet wird.
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
 |---------|-----------|------------|
-||  ||
+|Die Schüler lernen die Anwendung eines if/else Konstrukts|Monty möchte gerne noch ein Geschenk für Brian mitbringen. Er überlegt ob er lieber einen Strauß Blumen oder eine Tafel von Brians Lieblingsschokolade kaufen soll. Die Tafel Schokolade kostet 2 Euro und der Blumenstrauß 5 Euro. Lege 2 Variablem 'Blumenstrauß' und 'Schokolade' an, welche den Preis der Gegenstände speichern. Zusätzlich noch eine Variable 'Taschengeld', welche den Betrag in Monty's Geldbeutel speichert, welcher 10 Euro beträgt. Dann finde mittels eines if/else Konstrukts heraus ob Monty Blumen, Schokolade oder sogar beides kaufen kann. Gebe auf dem Bildschrim die Gegenstände aus, die Monty kauft.|5 min|
 
 ####Lösungsbeispiel
 
