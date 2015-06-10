@@ -127,7 +127,7 @@ print liste[2]
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
 |---------|-----------|------------|
-||  ||
+|Die Schüler lernen eine Liste anzulege und auszugeben|Monty hat nun seine Fahrkarten gekauft und muss jetzt seinen Koffer packen. Er will folgende Dinge mitnehmen: Eine Hose, ein Hemd, eine Jacke, Socken, Schuhe und natürlich seine Zahnbürste. Lege eine Variable mit dem Namen 'gepaeck' an und füge sämtliche Gegenstände hinzu. Lasse anschließend die Liste auf dem Bildschirm ausgeben|3 min|
 
 ####Lösungsbeispiel
 
