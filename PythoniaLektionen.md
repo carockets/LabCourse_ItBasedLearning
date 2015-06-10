@@ -101,8 +101,8 @@ wiederhole = “drei” * 3		# ergibt “dreidreidrei”
 |Rechnen mit Modulo| Monty zahlt grundsätzlich nur mit 5 Euro scheinen und er will auch kein Wechselgeld, somit kann er die Reise nur antreten, wenn sich der Fahrpreis mit 5 Euro scheinen bezahlen lässt -- notfalls kauft er so viele Fahrten bis er bei einem Betrag ist, der sich mit 5Euro Scheinen zahlen lässt. Finde mittels einer Modulo Rechnung heraus, wie oft Brian mit dem Besuch von Monty rechnen kann.|3 min|
 
 ####Lösungsbeispiel
-```
-fahrpreis = (42 * 0.25) * 2 + 15 // == 
+```python
+fahrpreis = (42 * 0.25) * 2 + 15
 print(fahrpreis)
 anzahl_besuche = fahrpreis % 5 // == 1 --> Monty muss 5 Fahrten buchen
 ```
@@ -112,10 +112,6 @@ anzahl_besuche = fahrpreis % 5 // == 1 --> Monty muss 5 Fahrten buchen
 ####Einführung
 Mit den Rechenoperationen hast du nun eigentlich schon das wichtigste gelernt. An dieser Stelle wollen wir uns einem anderen, auch sehr wichtigem Thema annehmen -- Kommentaren.
 Manchmal kann es sehr nützlich sein, im Code Erklärungen hinzuzufügen, damit andere Leute verstehen, was der Code tut oder was sich der Programmierer dabei gedacht hat. Dieser Text soll natürlich bei der Ausführung des Programmes vom Computer ignoriert werden. Kommentare werden in Python mit dem Symbol `#` eingeleitet. Sofern dieses Symbol auftaucht, wird der restliche Text in dieser Zeile vom Computer ignoriert. Als Beispiel hierfür kannst du dir nochmal das obige Code Beispiel anschauen.
-####Aufgaben
-|Lernziel | Umsetzung | Zeitaufwand |
-|---------|-----------|------------|
-||  ||
 
 ###Lektion 4 — Listen
 ####Einführung
