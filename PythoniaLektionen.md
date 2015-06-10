@@ -147,7 +147,10 @@ Hoffentlich hast du gemerkt, dass Listen an sich gar nicht schwer sind. Natürli
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
 |---------|-----------|------------|
-||  ||
+|Die Schüler lernen die Länge einer Liste zu ermitteln|Mit erschrecken stellt Monty fest, dass seine Reisegesellschaft nur 5 Kilo Freigepäck erlaubt. Lege eine Variable mit dem Namen 'gewicht' an, die das Gewicht von Monty's Gepäck speichert. Er weiß, dass im Durchschnitt alle seine Sachen 400 Gramm wiegen.|2 min|
+|Die Schüler lernen ein Element aus einer Liste zu löschen|Gerade hat Monty beim letzten Blick in den Wetterbericht festgestellt, dass es sonnig und warm wird und er somit seine Jacke nicht brauchen wird. Entferne die Jacke wieder aus seinem Gepäck|1 min|
+|Die Schüler lernen Elemente zu einer Liste hinzuzufügen|Brian ruft Monty kurz vor der Abfahrt an und fragt ihn ob er denn Lust hätte mit ihm schwimmen zu gehen. Nun muss Monty noch seine Badehose, Badelatschen und seine Taucherbrille mitnehmen. Füge diese Dinge zu seinem Reisegepäck hinzu|2 min|
+|Die Schüler lernen den Index eines Elements aus einer Liste herauszufinden|Unterwegs fragt sich Monty ob der denn auch an seine Socken gedacht hat. Lege eine Variable mit dem Namen 'socken' an, welche den Index des Elements 'Socken' aus der Gepäck-Liste speichert|2 min|
 
 ####Lösungsbeispiel
 
