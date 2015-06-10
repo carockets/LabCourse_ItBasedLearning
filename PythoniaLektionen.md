@@ -91,9 +91,15 @@ wiederhole = “drei” * 3		# ergibt “dreidreidrei”
 ####Aufgaben
 |Lernziel | Umsetzung | Zeitaufwand |
 |---------|-----------|------------|
-||  ||
+|Eine einfache Rechenaufgabe lösen|Zum Einstieg löse bitte folgende einfache Aufgabe: Monty möchte demnächst seinen Freund Brian besuchen fahren und wissen, wie viel ihn das kostet. Brian wohnt 42km entfernt. Monty weiß, dass er für jeden Kilometer 25 cent mit der Bahn zahlen muss. Zusätzlich benötigt er noch ungefähr 15 Euro um sich für die Reise ein Buch und eine Cola zu kaufen. Lege eine Variable mit dem Namen 'fahrpreis' an und berechne wieviel Monty's Hin- und Rückreise kostet. Wir nehmen an, dass Monty das Buch und die Cola nur einmal kauft. Dann lasse den Wert der Variable auf dem Bildschirm ausgeben. |2 min|
+|Rechnen mit Modulo| Monty zahlt grundsätzlich nur mit 5 Euro scheinen und er will auch kein Wechselgeld, somit kann er die Reise nur antreten, wenn sich der Fahrpreis mit 5 Euro scheinen bezahlen lässt -- notfalls kauft er so viele Fahrten bis er bei einem Betrag ist, der sich mit 5Euro Scheinen zahlen lässt. Finde mittels einer Modulo Rechnung heraus, wie oft Brian mit dem Besuch von Monty rechnen kann.|3 min|
 
 ####Lösungsbeispiel
+```
+fahrpreis = (42 * 0.25) * 2 + 15 // == 
+print(fahrpreis)
+anzahl_besuche = fahrpreis % 5 // == 1 --> Monty muss 5 Fahrten buchen
+```
 
 ##Unit 2
 ###Lektion 3 — Kommentare
