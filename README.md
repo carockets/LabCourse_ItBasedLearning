@@ -38,3 +38,6 @@ The differen Versions contain the following things:
 - New Text Window inside Code Editor
 - Command Line interface
 
+---
+- **v.0.0.5 (Date 10.06.2015)**
+
