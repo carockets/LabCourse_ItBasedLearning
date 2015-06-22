@@ -1,0 +1,556 @@
+﻿
+Lesson0_0_Text = "Lektion 0: \n\nHerzlich willkommen zu unserem Pythonlerntutorial! \n\nImmer wenn du ein Abenteuer bestanden" \
+           " hast wirst du mit einer Python Lektion belohnt und kannst so spielerisch Programmieren lernen.\n"\
+           "Dabei wirst du Schritt für Schritt in eine der meist verwendeten Skriptsprachen, Python, eingeführt.\n\n"\
+           "Zum Verstaendnis der Aufgaben werden die Befehle und vorgegebene Begriffe in spitze Klammern <Befehl> gesetzt.\n\n\nUm eine Lektion abzuschließen und zur nächsten zu kommen, " \
+           "klicke auf 'Check Code' - Hast du den richtigen Code programmiert wird dir das Ergebnis ausgegeben und der 'Weiter' Knopf wird eingeblendet. " \
+           "Wenn du du etwas falsches eingibst, wird dir eine Fehlermeldung angezeigt. \n\nDa wir im Moment keine Aufgabe gestellt haben, probiere es einfach mal aus und klicke auf 'Check Code'." \
+	   "Python ist sehr sensitiv, wenn es um Leerzeichen und Groß- und Kleinschreibung geht! Achte auf Leerzeichen am Anfang, Einrückungen mit Tab und das dein Ergebnis exakt der Aufgabenstellung entspricht!\n\n\n\n\n\n\n\n\n\n"
+
+Lesson0_0_GivenCode = "\n\n\n\n\n"
+Lesson0_0_SolutionCode = ""
+
+Lesson0_0_StringBoolean = False
+Lesson0_0_SolutionOutput =""
+
+Lesson0_0_AddedCodeBoolean = False
+Lesson0_0_AddedCode = ""
+
+Lesson0_0_Name = "Intro"
+
+
+Lesson1_0_Text = "Lektion 1.0: \n\nWillkommen zu deiner ersten Lektion.\n\n Jedes Programm muss mit der Welt kommunizieren können, " \
+                  "dazu gibt es in Python die Funktion <print> (ausdrucken/ausgeben). \n\n\nDas einfächste Beispiel " \
+                  "hierfür ist sich 'Hello World' ausgeben zu lassen. Dazu muss der Befehl <print> und die gewünschte " \
+                  "Ausgabe in Anführungszeichen <'Hello World'> eingegeben werden, da in diesem Fall die Ausgabe ein String (also eine Reihenfolge von Buchstaben) ist. \n\n\nAufgabe: \n\nGeben Sie folgenden Satz aus: \n" \
+                  "'Python ist KEINE Schlange'.\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+
+Lesson1_0_GivenCode = "print 'Hello World'\n\n\n\n\n"
+Lesson1_0_SolutionCode = "print 'Python ist KEINE Schlange'"
+
+Lesson1_0_StringBoolean = True
+Lesson1_0_SolutionOutput ="Python ist KEINE Schlange"
+
+Lesson1_0_AddedCodeBoolean = False
+Lesson1_0_AddedCode = ""
+Lesson1_0_Name = "Print"
+
+Lesson1_1_Text = "Lektion 1.1:\n\nUm Werte und Ergebnisse in einem Programm wieder verwenden zu können," \
+                 " gibt es in Programmiersprachen Variablen. \nDiese haben einen Namen und können " \
+                 "mit verschiedenen Arten von Werten belegt werden. Für den Namen können " \
+                 "Groß- und Kleinbuchstaben, Ziffern und das Zeichen _ (Unterstrich) verwendet werden.\n" \
+                 "Das erste Zeichen darf aber keine Ziffer sein und es dürfen keine " \
+                 "reservierten Wörter der Programmiersprache verwendet werden. \n\n\n" \
+                 "Wie in der Mathematik kann man mit diesen Variablen die Grundrechenarten " \
+                 "Addition ( + ), Subtraktion ( - ), Multiplikation ( * ) und Division ( / ) ausführen.\n" \
+                 "Dabei kann sowohl mit ganzen Zahlen (Integer) als auch mit Fließkomma Zahlen " \
+                 "(Floats) gerechnet werden. Bei Floats wird wie im Englischen üblich der . (Punkt) " \
+                 "statt dem Komma verwendet.\n\n\n\n" \
+                 "Aufgabe: \n\nWeisen Sie der Variablen x die Differenz aus 14.56 - 7 zu " \
+                 "und geben sie mit <print> das Ergebnis aus. Berechnen Sie ebenfalls für y das " \
+                 "Produkt von 35 * 49 und fuer z den Quotienten von 50.4 / 3.6 und geben Sie " \
+                 "jeweils in dieser Reihenfolge (x,y,z) das Ergebnis aus.\n\n\n\n\n\n\n"
+
+Lesson1_1_GivenCode = "x = 3 + 1732\nprint x\n\n\n\n\n"
+Lesson1_1_SolutionCode = "x = 14.56 - 7\nprint x\ny = 35 * 49\nprint y\nz = 50.4 / 3.6\nprint z"
+
+Lesson1_1_StringBoolean = True
+Lesson1_1_SolutionOutput ="7.56\n1715\n14.0"
+
+Lesson1_1_AddedCodeBoolean = True
+Lesson1_1_AddedCode =  \
+    "\nif (x == (14.56 - 7):\n\t 1+1\nelse:\n\tErrorlist.append('Error: Variable x hat einen falschen Wert')" \
+    "\nif (y == 1715):\n\t 1+1\nelse:\n\tErrorlist.append('Error: Variable y hat einen falschen Wert')" \
+    "\nif (z == 14.0):\n\t 1+1\nelse:\n\tErrorlist.append('Error: Variable z hat einen falschen Wert')"
+
+Lesson1_1_Name = "Integer und Rechenzeichen"
+
+
+
+Lesson1_2_Text = "Lektion 1.2 \n\nZusätzlich zu dem normalen Divisionsoperator < / > gibt es die ganzzahlige Division. Der Operator dazu ist der < // >. " \
+                 "Mit diesem wird das ganzzahlige Ergebnis der Division berechnet. Zusätzlich gibt es den Modulo Operator < % > mit dem der Rest berechnet wird.\n\n\n" \
+                 "Speziell in Python 2 liefert auch schon 7/5 das ganzzahlige Ergebnis 1, dies kann aber mit 7.0/5 oder 7/5.0 umgangen werden. \n\n" \
+		 "Berechne den Wert von 7 geteilt durch 5 als ganzzahlige Divison, weise ihn der Variable 'GanzeZahl' zu und gebe ihn aus.  \n\n" \
+                 "Berechne zusätzlich den Rest von 7 geteilt durch 5 mit Modulo, weise ihn der Variable 'mod' zu und gebe ihn aus.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+
+Lesson1_2_GivenCode = "GanzeZahl = 7.0 / 2\n\n\n\n\n"
+Lesson1_2_SolutionCode = "mod = 7 % 5\nprint mod"
+
+Lesson1_2_StringBoolean = True
+Lesson1_2_SolutionOutput ="3\n2"
+
+Lesson1_2_AddedCodeBoolean = True
+Lesson1_2_AddedCode = \
+    "\nif (GanzeZahl == 1.0:\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable GanzeZahl hat einen falschen Wert')" \
+    "\nif (mod == 2:\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable mod hat einen falschen Wert')" \
+
+Lesson1_2_Name = "Modulo 1"
+
+
+
+Lesson1_3_Text = "Lektion 1.3 \n\nBevor wir nun richtig loslegen folgen noch ein paar einfache Rechenaufgaben. " \
+                 "Brian wohnt 42km entfernt von Monty. Monty weiß, dass er für jeden Kilometer " \
+                 "mit der Bahn 25 Cent zahlen muss. Zusätzlich benötigt er noch ungefähr 15 Euro um sich " \
+                 "für die Reise ein Buch und eine Cola zu kaufen. Lege eine Variable mit dem Namen " \
+                 "'fahrpreis' an und berechne wieviel Monty's Hin- und Rückreise (Kilometerpauschale + sonstige Ausgaben)" \
+                 " kostet. Wir nehmen an, dass Monty das Buch und die Cola nur einmal kauft. \n" \
+                 "Gebe den Wert der Variable auf dem Bildschirm aus. \n\n" \
+                 "Monty zahlt grundsätzlich nur mit 5 Euro Scheinen.\n\n" \
+                 "Wie viel Wechselgeld bekommt Monty zurück wenn er sich Fahrkarten kauft um Brian zweimal zu besuchen?" \
+                 "Berechne den Wert mit Modulo (wie du es in der vorherigen Aufgabe gelernt hast) und weise ihn der Variable 'Wechselgeld' zu!\n" \
+                 "Gebe anschließend die Variable 'Wechselgeld' mit <print> aus.\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+
+Lesson1_3_GivenCode = "fahrpreis = \nWechselgeld = \n\n\n\n\n"
+Lesson1_3_SolutionCode = "fahrpreis = ((42 * 0.25) * 2) + 15\nprint(fahrpreis)\nWechselgeld = (fahrpreis *2)%5"
+
+Lesson1_3_StringBoolean = True
+Lesson1__SolutionOutput ="36\n2"
+
+Lesson1_3_AddedCodeBoolean = True
+Lesson1_3_AddedCode = \
+    "\nif (fahrpreis == ((42 * 0.25) * 2) + 15):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable fahrpreis hat einen falschen Wert')" \
+    "\nif (Wechselgeld == 2):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable Wechselgeld hat einen falschen Wert')" \
+
+Lesson1_3_Name = "Modulo 2"
+
+
+########################################_2_Lektion_########################################
+
+
+Lesson2_0_Text = "Lektion 2.0: \n\nUm nicht nur mit Zahlen arbeiten zu können, sondern auch mit Texten gibt es auch Variablen " \
+                 "für Zeichenketten (Strings). Die Zuweisung erfolgt dadurch, dass die Entsprechende Zeichenkette " \
+                 "in 'String' (Anführungsstrichen) gesetzt wird. Für Zeichenketten gibt es die Operationen + und *. " \
+                 "Bei + werden die Inhalte zweier Stringvariablen aneinander gehängt, bei * kann die " \
+                 "Stringvariable mit einer ganzen Zahl multipliziert werden. \n\n\n\nAufgabe:\n\n" \
+                 "Geben sie in das Schriftfeld den Variablennamen <bunteblume> ein und  belegen Sie ihn " \
+                 "indem sie den Wert 'Rot' und den Wert 'gelb' addieren. \n\nWeißen sie den Variablen <glueck> " \
+                 "den Wert 'toi ' (Vergiss nicht das Leerzeichen nach 'toi'!)und <wunsch> den Wert 'fuer die Pruefung' zu. \n\nMutlipliziere <glueck> mit 3 und addiere dies zu <wunsch> " \
+                 "hinzu und weisen sie das Ergebnis <glueckwunsch> zu. \n\n\n\n\n\n\n\n\n\n\n"
+
+Lesson2_0_GivenCode = "blume = 'Gruen'\nprint blume\n\nHeyhey ='Hello '+'World'\nprint Heyhey\n\ncolours = 'red'*3\nprint colours\n\n\n\n\n"
+Lesson2_0_SolutionCode = "bunteblume = 'Rot' + 'gelb'\nglueck = 'toi'\nwunsch = ' fuer die Pruefung'\nglueckwunsch= glueck'*3 + wunsch"
+Lesson2_0_StringBoolean = True
+Lesson2_0_SolutionOutput ="toi toi toi fuer die Pruefung"
+
+Lesson2_0_AddedCodeBoolean = True
+Lesson2_0_AddedCode = \
+    "\nif (glueck == 'toi '):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable glueck hat einen falschen Wert')" \
+    "\nif (wunsch == 'fuer die Pruefung'):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable glueck hat einen falschen Wert')" \
+    "\nif (glueckwunsch == 'toi toi toi fuer die Pruefung'):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable glueckwunsch hat einen falschen Wert')" \
+    "\nif (bunteblume == 'Rotgelb'):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable bunteblume hat einen falschen Wert')"
+    #"\nif (glueck == 'toi'):\n\t 1+1\nelse:\n\tErrorlist.append('Error: Variable glueck hat einen falschen Wert')"
+
+Lesson2_0_Name = "String Variablen"
+
+
+
+
+
+Lesson2_1_Text = 	"Lektion 2.1: \n\nWir können auch Zahlen in einen String einfügen und dann ausgeben. Es funktioniert fast wie in der Lektion davor, bloß müssen wir noch "	\
+			"an der Zahl eine kleine Veränderung vornehmen. Um eine Zahl mit dem <+> Operator an einen String anfügen zu können, wie wir das vorher mit " \
+			"Strings und String gemacht haben, müssen wir die Zahl zu einem String formatieren. Ausgabe technisch verändert sich and er Zahl nichts." \
+			"Lege eine Variable mit dem namen <Unsere_Zahl> an und belege sie mit dem Wert <1337>. Gebe diesen Wert aus. Anschließend lege einen String an mit dem Namen 'Unser_String' mit dem Inhalt:" \
+			"'Dies ist eine String.' Gebe auch diesen aus. Nun gebe den String erneut aus, aber hänge <Unsere_Zahl> an ihn an. Um dies machen zu können musst du um den " \
+			"Variablennamen der Zahl während du ihn an den String anhängst, den folgenden Befehl schreiben: <str(Zahl)>. Formatieren wir die Zahl nicht zu einem String bevor wir sie an " \
+			"einen String anhängen, erhalten wir einen Fehler! Da wir <Unsere_Zahl> als Integer(als Zahl) behalten wollen und nicht permanent als String speichern wollen, weisen wir den Befehl <str(Zahl)> "\
+			"nicht Unsere_Zahl zu, sondern benutzen ihn diesen nur temporär im <print> Befehl. "
+
+
+Lesson2_1_GivenCode = "Rote_Blume = 'Rote'+'_'+'Blume'"
+Lesson2_1_SolutionCode = "Unsere_Zahl = 1337\nprint Unsere_Zahl\nUnser_String ='Dies ist ein String.'\nprint Unser_String\nprint Unser_String + str(Unsere_Zahl)"
+
+Lesson2_1_StringBoolean = True
+Lesson2_1_SolutionOutput ="1337\nDies ist ein String.\n Dies ist ein String.1337"
+Lesson2_1_AddedCodeBoolean = False
+Lesson2_1_AddedCode = \
+    		"\nif (Unser_String == 'Dies ist ein String.'):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable Unser_String hat einen falschen Wert')"     		"\nif (Unsere_Zahl == 1337):\n\t 1+1\nelse:\n\tErrorlist.append('Error: Variable glueck hat einen falschen Wert')"
+
+Lesson2_1_Name = "String Varialben II"
+
+
+
+
+
+
+Lesson2_2_Text = "Lektion 2.2: \n\nMit den Rechenoperationen hast du nun eigentlich schon das wichtigste gelernt. An dieser Stelle wollen wir uns einem anderen, " \
+                 "auch sehr wichtigem Thema annehmen -- Kommentaren. Manchmal kann es sehr nützlich sein, im Code Erklärungen hinzuzufügen, " \
+                 "damit andere Leute verstehen, was der Code macht oder was sich der Programmierer dabei gedacht hat. Manchmal braucht der Programmierer selber bei über 1000 Zeilen Code auch einfach" \
+                 "nur eine Gedächtnisstütze. \n\n\n\n" \
+                 "Dieser Text soll natürlich bei der Ausführung des Programmes vom Computer ignoriert werden, auch wenn sich Befehle im Kommentar befinden. Kommentare werden in " \
+                 "Python mit dem Symbol < # > eingeleitet. Sofern dieses Symbol auftaucht, wird der restliche Text in dieser Zeile vom Computer ignoriert. \n\n\n" \
+                 "Die nächste Aufgabe ist einfach: Schreibe ein paar Kommentare in den Code-Bereich und drücke auf 'Check Code'\n\n\n\n\n\n\n\n\n\n\n\n"
+
+Lesson2_2_GivenCode = "# print 'Das hier ist ein Kommentar und wird von Python ignoriert'\n\n\n\n\n"
+Lesson2_2_SolutionCode = ""
+
+Lesson2_2_StringBoolean = True
+Lesson2_2_SolutionOutput =""
+
+Lesson2_2_AddedCodeBoolean = False
+Lesson2_2_AddedCode = ""
+
+Lesson2_2_Name = "Kommentare"
+
+
+########################################_3_Lektion_########################################
+
+
+
+Lesson3_0_Text = "Lektion 3.0: \n\nMit Kommentaren selbst kannst du natürlich nichts programmieren, deswegen nehmen wir uns " \
+                 "jetzt wieder einem sehr essentiellem Thema an, und zwar Listen. \n\n\nListen sind besondere Datenstrukturen. " \
+                 "In ihnen können mehrere Werte gespeichert werden. Der Zugriff auf diese Werte erfolgt mit einem Index " \
+                 "(die Stelle in der Liste, an der der Wert gespeichert ist — beginnend bei 0 !). \n\nEine Liste wird mit [] definiert." \
+                 "Monty hat nun seine Fahrkarten gekauft und muss jetzt seinen Koffer packen. Er will folgende Dinge in dieser Reihenfolge mitnehmen: " \
+                 "Eine Hose, ein Hemd, eine Jacke, Socken, Schuhe und natürlich seine Zahnbuerste. \n\n\n\nLege eine Variable mit dem Namen " \
+                 "'gepaeck' an und füge sämtliche Gegenstände hinzu. Lasse anschließend die Liste auf dem Bildschirm ausgeben\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+
+
+Lesson3_0_GivenCode = "liste = [] # Da wir in der dritten Zeile die Liste gleich füllen,\n# können wir die erste Zeile auch weglassen\nliste = [0, 1, 2, 3]\nprint liste[2] # Die dritte (!) Stelle wird ausgegeben. \n\n\n\n\n"
+Lesson3_0_SolutionCode = "gepaeck = ['Hose', 'Hemd', 'Jacke', 'Socken', 'Schuhe', 'Zahnbuerste']\nprint(gepaeck)"
+
+Lesson3_0_StringBoolean = True
+Lesson3_0_SolutionOutput ="[Hose, Hemd, Jacke, Socken, Schuhe, Zahnbuerste]"
+
+Lesson3_0_AddedCodeBoolean = True
+Lesson3_0_AddedCode = "" \
+                      "\nif (gepaeck == ['Hose', 'Hemd', 'Jacke', 'Socken', 'Schuhe', 'Zahnbuerste']):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable gepaeck hat einen falschen Wert')"
+
+
+Lesson3_0_Name = "Listen"
+
+
+
+
+Lesson3_1_Text = "Lektion 3.1: \n\nHerzlichen Glückwunsch - du hast nun schon ein ganz schönes Stück Arbeit hinter dir!" \
+	"Wir schreiten fort zu dem Themenkomplex der Kontrollstrukturen. Was das genau ist erfährst du jetzt: " \
+	"In einem Programm möchte man oftmals in Abhängigkeit von einer bestimmten Bedingung unterschiedlich " \
+	"verfahren. Dazu wird die Bedingung, die nach dem Befehl if (wenn) folgt, überprüft. " \
+	"Ist diese wahr (True), so wird der Code ausgeführt, der direkt im Anschluss folgt. Um zu kennzeichnen, " \
+	"dass der Code zu dem if-Block gehört wird er mit einem Tab eingerückt. Wenn der Code nicht mehr zu " \
+	"dem if-Block gehört wird er nicht mehr eingedrückt."\
+	"Ist die Bedingung falsch (False), so wird  der Code nach else (‘sonst’) ausgeführt. Else selber wird nicht eingerückt " \
+	"da es nicht zum if-Block gehört. Zwischen den if/else Blöcken darf nichts stehen dass nicht eingerückt ist, damit " \
+	"Python weiß, dass das else zu dem if davor gehört. Nachdem der else-Block zuende ist, wird der Code wieder nicht eingerückt. " \
+	"Monty möchte gerne noch ein Geschenk für Brian mitbringen. Er überlegt ob er lieber " \
+	"einen Strauß Blumen oder eine Tafel von Brians Lieblingsschokolade kaufen soll. " \
+	"Die Tafel Schokolade kostet 2 Euro und der Blumenstrauss 5 Euro. Finde mittels eines " \
+	"if/else Konstrukts heraus ob Monty Blumen, Schokolade oder sogar beides kaufen kann. " \
+	"Er würde lieber die Blumen als die Schokolade kaufen, deshalb teste zuerst ob er genug Geld " \
+	"für die Blumen hat. Gebe auf dem Bildschirm die Gegenstände als String ('Blumenstrauss'/'Schokolade') aus, "\
+	"die Monty kauft" \
+	"Gebe danach aus wieviel Geld er noch übrig hat. Modifiziere das gegebene Beispiel. Monty hat 10Euro Taschengeld. "
+
+Lesson3_1_GivenCode =   "\nblumenstrauss = 0 "\
+			"\nschokolade = 0 "\
+			"\ntaschengeld = 0 " \
+			"\n" \
+			"\n" \
+			"\nif geldeinwurf > fahrpreis:"\
+    			"\n\tRueckgabe = fahrpreis - geldeinwurf"\
+			"\nelse: "\
+    			"\n\trueckgabe = 0\n\n\n\n\n" \
+
+Lesson3_1_SolutionCode = "if taschengeld > blumenstrauss:" \
+				"\n\tprint 'Blumenstrauss' " \
+				"\n\ttaschengeld = taschengeld - blumenstrauss" \
+				"\nif taschengeld > schokolade " \
+				"\n\tprint 'Schokolade' " \
+				"\n\ttaschengeld = taschengeld - schokolade" \
+				"\nprint taschengeld"
+
+Lesson3_1_StringBoolean = True
+Lesson3_1_SolutionOutput = "Blumenstrauss\nSchokolade\n3"
+
+Lesson3_1_AddedCodeBoolean = True
+Lesson3_1_AddedCode = 	"\nif (taschengeld == 3 ):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable taschengeld hat einen falschen Wert')" \
+			"\nif (schokolade == 2 ):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable schokolade hat einen falschen Wert')" \
+			"\nif (blumenstrauss == 5 ):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable blumenstrauss hat einen falschen Wert')"
+
+Lesson3_1_Name = "if/else Konditionen"
+
+
+
+
+
+########################################_4_Lektion_########################################
+
+Lesson4_0_Text = "Lektion 4.0 \n\nWir haben in der letzten Lektion gelernt wie man mit Kontrollstrukturen im Programm je nach Situation" \
+		" entscheiden kann. Bisher haben wir mit einem direkten Vergleich entschieden. Man kann jedoch auch " \
+		"über sogennannte 'boolean' Variablen entscheiden lassen. Diese Variablen haben nur zwei mögliche Werte: "\
+		" <True> und <False>. Wir können sie wie einen Vergleich einbauen, bloß dass wir die Variable vorher festgelegt haben " \
+		"und wir keinen Vergleich mehr brauchen, da wir die Antwort ja schon festgelegt haben." \
+		"Dies kann nützlich sein wenn in einem vorhergegangenen if-else-Block bei dem if-Teil einer Variable 'True' zugewiesen hat "\
+		"und beim else-Teil 'False'. "\
+		" Belege eine Variable mit dem Namen 'Kondition' mit dem Wert <True> und schreibe einen if-else-Block in dem " \
+		"falls die Variable mit <True> belegt wird der Satz 'Die Kondition ist wahr!' ausgegeben wird oder ansonsten der Satz: " \
+		"'Kondition ist nicht wahr!'."
+
+Lesson4_0_GivenCode =   "PythonistCool = True\n\nif PythonistCool:\n\tprint 'Stimmt!'\n\n\n\n"
+
+Lesson4_0_SolutionCode = "Kondition = True" \
+			"\nif Kondition:" \
+			"\n\tprint 'Die Kondition ist wahr!'" \
+			"\nelse:" \
+			"\n\tprint 'Die Kondition ist nicht wahr!' "
+
+Lesson4_0_StringBoolean = True
+Lesson4_0_SolutionOutput = "Die  Kondition ist wahr!"
+
+Lesson4_0_AddedCodeBoolean = True
+Lesson4_0_AddedCode = 	"\nif Kondition == True ):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable Kondition hat einen falschen Wert')"
+
+Lesson4_0_Name = "Boolean Werte"
+
+
+
+
+
+
+
+Lesson4_1_Text = "Lektion 4.1: \n\nNachdem wir jetzt den Grundstein für komplexere Entscheidungsstrukturen und Listen" \
+		 "gelegt haben, gehen wir jetzt dazu über Listen dynamisch im Code zu manipulieren basierend auf Entscheidungen die wir vorher treffen. " \
+		 "Um zu einer bestehenden Liste etwas hinzuzufügen (anzuhängen) ist der folgende Befehl nötig: " \
+		 "<listenname.append(something)>. 'something' kann zum Beispiel ein String sein oder eine Zahl." \
+		 "Um etwas aus einer Liste zu entfernen ist der folgende Befehl nötig: " \
+		 "listenname.remove(something). " \
+		 "Schreibe einen if-else-Block mit dem du auswertest, ob Sommer ist oder nicht. Wenn Sommer ist, will " \
+		 "Monty zuerst (!) seine 'Badehose' und dann die 'Sonnenbrille' einpacken statt der 'Jeans'. Falls kein Sommer ist, nimmt er zuerst (!) einen 'Pullover' mit " \
+		 "und dann die 'Jacke', aber kein 'Hemd'. Gehe davon aus, dass es Herbst ist, wenn Monty in den Urlaub fahren will. " \
+		 "Nach dem if/else Konstrukt gebe die gepaeck-Liste mit <print> aus. "
+
+
+Lesson4_1_GivenCode =   "Sommer = True \ngepaeck = ['Jeans', 'Hemd', 'Socken', 'Schuhe', 'Zahnbuerste']\n\n\n\n\n"
+
+Lesson4_1_SolutionCode = "Sommer = False \ngepaeck = ['Jeans', 'Hemd', 'Socken', 'Schuhe', 'Zahnbuerste']\n\nif Sommer:" \
+			 "\n\tgepaeck.append('Badehose') " \
+			 "\n\tgepaeck.append('Sonnenbrille') " \
+			 "\n\tgepaeck.remove('Jeans') " \
+			 "\nelse: " \
+			 "\n\tgepaeck.append('Pullover') " \
+			 "\n\tgepaeck.append('Jacke') " \
+			 "\n\tgepaeck.remove('Hemd')" \
+			 "\n\tprint gepaeck"
+
+Lesson4_1_StringBoolean = True
+Lesson4_1_SolutionOutput = "['Jeans', 'Socken','Schuhe','Zahnbuerste','Pullover','Jacke']"
+
+Lesson4_1_AddedCodeBoolean = True
+Lesson4_1_AddedCode = 	"\nif gepaeck == ['Jeans', 'Socken','Schuhe','Zahnbuerste','Pullover','Jacke'] ):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable gepaeck hat einen falschen Wert')" \
+
+Lesson4_1_Name = "Listenmanipulation I"
+
+
+
+########################################_5_Lektion_########################################
+
+
+
+Lesson5_0_Text = "Lektion 5.0: \n\n" \
+		"Verzweigungen und Listen waren gar nicht so schwer, oder? Oftmals möchte man jedoch auch Code wiederholt ausführen — " \
+		"hierfür verwenden Programmierer sogenannte Schleifen (engl. ‘loops’). " \
+		"Loops funktionieren vom Aufbau wie if/else-Blöcke. Alles was eine Ausführung des Loops ausführen soll, wird eingerückt." \
+		"Angenommen wir haben eine Liste mit ganzzahligen werten und "\
+		"möchten zu jedem Wert 1 addieren, dann sähe das wie folgt aus:"\
+		"\n\n\nliste = [0, 1, 2, 3]" \
+		"\nfor zahl in liste" \
+		"\nzahl = zahl + 1"\
+		"\nprint liste" \
+		"\n\nMan kann dies etwa so verstehen: \nFÜR Element IN Liste: \n\tführe diesen Code aus\nDiesen nicht mehr\n\n" \
+		"Monty ist nach stundenlanger Fahrt endlich bei Brian angekommen." \
+		"Nun möchte er seinen Koffer auspacken. Lege eine leere Listen-Variable 'kleiderschrank' an " \
+		"und füge ihr alle Gegenstände aus der Gepäck-Liste hinzu und lösche sie gleichzeitig aus der gepaeck liste mithilfe eines Loops. " \
+		"Gebe nach dem Loop zuerst die (dann leere) Variable gepaeck aus"
+
+
+Lesson5_0_GivenCode =   "gepaeck = ['Jeans', 'Hemd', 'Socken', 'Schuhe', 'Zahnbuerste']\n\n\n\n\n"
+
+Lesson5_0_SolutionCode = "gepaeck = ['Jeans', 'Hemd', 'Socken', 'Schuhe', 'Zahnbuerste']" \
+			"\nfor x in gepaeck: " \
+			"\n\tKleiderschrank.append(x) " \
+			"\n\t gepaeck.remove(x) " \
+			"\nprint gepaeck" \
+			"\nprint kleiderschrank"
+
+Lesson5_0_StringBoolean = True
+Lesson5_0_SolutionOutput = ""
+
+Lesson5_0_AddedCodeBoolean = True
+Lesson5_0_AddedCode = 	"\nif gepaeck == [ 'Socken', 'Schuhe', 'Zahnbuerste', 'Pullover','Winterschuhe'] ):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable gepaeck hat einen falschen Wert')"
+Lesson5_0_Name = "For-Schleife"
+
+
+
+Lesson5_1_Text = 	"Lektion 5.1: \n\nWie wir schon am Anfang bei Listen gelernt haben, Listen fangen bei '0' zu zählen an. Denke daran bei dieser Aufgabe! " \
+			"Um den Index (also die Stelle) eines Elements in einer Liste herauszufinden, gibt es in Python den folgenden Befehl: " \
+			"<listenname.index(something)>. Gebe den Index der 'Schuhe' aus mit <print>. Anschließend füge mit dem Befehl <listenname.insert(index,'something')> an die Index-Stelle der Schuhe "  \
+			"einen 'Regenschirm' ein. Dann gebe mit einer for-Schleife jeweils die einzelnen gepackten Gegenstaende aus und mit nachfolgendem <print> gleich den Index des Gegenstandes." \
+			"Wenn du die Aufgabe abgeschlossen hast, kontrolliere den Index der Schuhe vor und nach dem Einfügen des Regenschirms am selben Index!"
+
+Lesson5_1_GivenCode =   "gepaeck = [ 'Socken', 'Schuhe', 'Zahnbuerste', 'Pullover', 'Winterschuhe']\n\n\n\n\n"
+
+Lesson5_1_SolutionCode = 	"print gepaeck[1]" \
+				"\ngepaeck.insert(1,'Regenschirm')" \
+				"\nfor x in gepaeck:" \
+				"\n\tprint x " \
+				"\n\tprint gepaeck.index(x)"
+
+
+Lesson5_1_StringBoolean = True
+Lesson5_1_SolutionOutput = "1\nSocken\n0\nRegenschirm\n1\nSchuhe\n2\nZahnbuerste\n3\nPullover\n4\nWinterschuhe\n5"
+
+Lesson5_1_AddedCodeBoolean = True
+Lesson5_1_AddedCode = 	"\nif gepaeck == [ 'Socken' ,'Regenschirm' ,'Schuhe', 'Zahnbuerste', 'Pullover','Winterschuhe'] ):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable gepaeck hat einen falschen Wert')" \
+
+Lesson5_1_Name = "Listen - Index und Insert"
+
+
+
+
+
+Lesson5_2_Text = "Lektion 5.2: \n\nIn dieser Aufgabe wollen wir nun kombinieren was wir bisher gelernt haben." \
+		" Brian möchte Monty nun noch einige Gegenstände als Geschenk mitgeben, welche " \
+		" jedoch möglicherweise nicht alle in seinen Koffer passen. Schreibe eine for-Schleife " \
+		"und teile die Gegenstände so auf die Koffer auf, dass sich in keinem Koffer mehr als 5 Dinge befinden!" \
+		"Packe mit einer for-Schleife in der ein if-Block ist so lange Gegenstände in  den ersten Koffer hinein bis dieser voll ist. " \
+		"Dann beginne den zweiten Koffer zu packen und schließlich den dritten. Anschließend gebe den Inhalt " \
+		"der Koffer in dieser Reihenfolge aus. \n\n\n" \
+        "Um diese Aufgabe zu lösen musst du noch zwei weitere Befehle kennen:\n\n" \
+        "1. Die Länge einer Liste können wir mit <len(listenname)> herausfinden. (Denke daran, letzter Index = Länge-1, da wir " \
+        "bei Listen anfangen mit 0 zu zählen!" \
+        "\n\n" \
+        "2. Mit dem Vergleichsoperator <==> können wir Zahlen, Listen und andere Variablen vergleichen!"
+
+Lesson5_2_GivenCode =  "gepaeck = [ 'Socken', 'Schuhe', 'Zahnbuerste', 'Pullover', 'Winterschuhe', 'Schokolade', 'Buch', " \
+            "\n'Kamera', 'Bonbons', 'Souvenirs', 'Kuchen', 'Taschenlampe']" \
+            "\n4 == 5 # Dies ergibt 'False'" \
+            "\n5 == 5 # Dies ergibt 'True'" \
+            "\nkoffer_1 = []" \
+            "\nkoffer_2 = []" \
+            "\nkoffer_3 = []\n\n\n\n\n\n"
+
+Lesson5_2_SolutionCode = "gepaeck = [ 'Socken', 'Schuhe', 'Zahnbuerste', 'Pullover', 'Winterschuhe', 'Schokolade', "\
+            "'Buch',  'Kamera', 'Bonbons', 'Souvenirs', 'Kuchen', 'Taschenlampe'] "\
+            "koffer_1 = []" \
+            "koffer_2 = []" \
+            "koffer_3 = []" \
+            "zaehler = 1" \
+            "\nfor x in gepaeck: " \
+                "if (len(koffer_1) == 5):" \
+                    "if (len(koffer_2) == 5):" \
+                        "koffer_3.append(x)" \
+                    "else:" \
+                        "koffer_2.append(x)" \
+                "else:"\
+                    "koffer_1.append(x)" \
+            "print koffer_1" \
+            "print koffer_2" \
+            "print koffer_3"
+
+Lesson5_2_StringBoolean = True
+Lesson5_2_SolutionOutput = "['Socken', 'Schuhe', 'Zahnbuerste', 'Pullover', 'Winterschuhe']" \
+                            "\n['Schokolade', 'Buch',  'Kamera', 'Bonbons', 'Souvenirs']" \
+                            "\n['Kuchen', 'Taschenlampe']"
+
+Lesson5_2_AddedCodeBoolean = True
+Lesson5_2_AddedCode =   "\nif koffer_1 == ['Winterschuhe', 'Pullover', 'Zahnbuerste', 'Schuhe', 'Socken']):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable koffer_1 hat einen falschen Wert')" \
+                        "\nif koffer_2 == ['Schokolade', 'Buch',  'Kamera', 'Bonbons', 'Souvenirs']):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable koffer_2 hat einen falschen Wert')" \
+                        "\nif koffer_3 == ['Kuchen', 'Taschenlampe']):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable koffer_3 hat einen falschen Wert')"
+
+Lesson5_2_Name = "Listen splitten"
+
+
+
+
+
+Lesson5_3_Text =    "Lektion 5.3:\n\nUm noch etwas vertrauter mit dem Thema Listen zu werden, das sehr elementar und wichtig ist " \
+		            "noch eine Aufgabe hierzu: Drehe den Inhalt einer gegebenen Liste um und speichere ihn in einer " \
+		            "neuen variablen. Gebe diese am Ende mit print aus.\n\n\n(Denke darüber nach in welcher Reihenfolge eine for-Schleife " \
+                    "die Liste durchgeht und an welcher Stelle (Index) du Variablen in eine neue Liste einfügen musst um die Variablen" \
+                    "-Reihenfolge umzudrehen.)"
+
+Lesson5_3_GivenCode =  "gepaeck = [ 'Socken', 'Schuhe', 'Zahnbuerste', 'Pullover', 'Winterschuhe']" \
+                        "gepaeck_gedreht = []"
+
+Lesson5_3_SolutionCode = "gepaeck = [ 'Socken', 'Schuhe', 'Zahnbuerste', 'Pullover', 'Winterschuhe']" \
+                        "gepaeck_gedreht = []" \
+                        "for x in gepaeck:"\
+                            "gepaeck_gedreht.insert(0, x)" \
+                        "print gepaeck_gedreht"
+
+Lesson5_3_StringBoolean = True
+Lesson5_3_SolutionOutput = "['Winterschuhe', 'Pullover', 'Zahnbuerste', 'Schuhe', 'Socken']" \
+
+Lesson5_3_AddedCodeBoolean = True
+Lesson5_3_AddedCode =  "\nif gepaeck == ['Winterschuhe', 'Pullover', 'Zahnbuerste', 'Schuhe', 'Socken']):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable gepaeck hat einen falschen Wert')"
+
+Lesson5_3_Name = "Listen umdrehen"
+
+
+
+
+
+Lesson5_4_Text = "Lektion 5.4:\n\nOftmals ist es sehr praktisch zu prüfen ob sich ein bestimmtes Element in einer Liste befindet, oder nicht. " \
+                 "Dies können wir mit der Python-Funktion <in> prüfen -- zum Beispiel <'Schuhe' in gepaeck> ergibt True oder False, " \
+                 "je nach dem ob sich das Element 'Schuhe' in der Liste gepaeck befindet. Schreibe ein Programm, " \
+                 "welches die Schnittmenge von 2 Listen in einer neuen Liste speichert und diese auf dem Bildschirm ausgibt"
+
+Lesson5_4_GivenCode =  "gepaeck_1 = ['Socken', 'Schuhe', 'Zahnbürste', 'Pullover', 'Winterschuhe']" \
+                        "\ngepaeck_2 = ['Buecher', 'Socken', 'Pullover', 'Schokolade', 'Schuhe']" \
+                        "\nschnittmenge = []"
+
+Lesson5_4_SolutionCode = "gepaeck_1 = ['Socken', 'Schuhe', 'Zahnbuerste', 'Pullover', 'Winterschuhe']" \
+                        "\ngepaeck_2 = ['Buecher', 'Socken', 'Pullover', 'Schokolade', 'Schuhe']" \
+                        "\nfor x in gepaeck_1:"\
+                            "\n\tif x in gepaeck_2:"\
+                                "\n\t\tschnittmenge.append(x)" \
+                        "\nprint schnittmenge"
+
+Lesson5_4_StringBoolean = True
+Lesson5_4SolutionOutput = "['Socken', 'Schuhe', 'Pullover']"
+
+Lesson5_4_AddedCodeBoolean = True
+Lesson5_4_AddedCode = "\nif gepaeck == ['Socken', 'Schuhe', 'Pullover']):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable gepaeck hat einen falschen Wert')"
+
+Lesson5_4_Name = "Schnittmengen von Listen"
+
+
+
+
+
+Lesson5_5_Text = "Lektion 5.5:\n\nManchmal ist es ganz nuetzlich, wenn man die Anzahl gewisser Zeichen in einem String zählen kann." \
+                 "String funktionieren eigentlich wie Listen. Wir können für jedes Zeichen etwas testen wenn wir wie bei den Listen " \
+                 "mit einer for-Schleife <for x in String> jeden einzelnen Buchstaben 'einmal in die Hand nehmen'. Für Vergleiche mit Strings " \
+                 "benutzen wir den Vergleichsoperator <'a' == 'b'> (der uns in diesem Fall 'False' herausgibt). "\
+		        "Suche dazu die Anzahl der 'e' und die der 'l' in dem Satz: 'dies ist die letzte lektion, ich hoffe es hat euch gefallen!' " \
+                 "Gebe am Ende erst 'Anzahl der e: ' (mit angehängter Anzahl) aus und dann dasselbe mit 'l'. "
+
+Lesson5_5_GivenCode = "Text ='dies ist die letzte lektion, ich hoffe es hat euch gefallen!'"\
+		       "\nanzahl_e=0"\
+		       "\nanzahl_l=0" \
+               "\n\n\n\n\n" \
+               "\nstring_anzahl_e = str(anzahl_e)" \
+               "\nprint 'Anzahl der e:' + string_anzahl_e)\n\n"
+
+Lesson5_5_SolutionCode = "Text ='dies ist die letzte lektion, ich hoffe es hat euch gefallen!'"\
+		          "anzahl_e=0"\
+		          "anzahl_l=0"\
+			  "for zeichen in Text:"\
+				"if zeichen == 'e':"\
+					"anzahl_e=anzahl_e+1"\
+			  "print 'Anzahl der e: ', anzahl_e"\
+			  "for zeichen in Text:"\
+				"if zeichen == 'l':"\
+					"anzahl_l=anzahl_l+1"\
+			  "print 'Anzahl der l: ', anzahl_l"\
+
+Lesson5_5_StringBoolean = True
+Lesson5_5_SolutionOutput =  "Anzahl der e:  10" \
+			                "\nAnzahl der l:  4"
+
+Lesson5_5_AddedCodeBoolean = True
+Lesson5_5_AddedCode = 	"\nif anzahl_e == 10 ):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable anzahl_e hat einen falschen Wert')" \
+                        "\nif anzahl_l == 4 ):\n\t1+1\nelse:\n\tErrorlist.append('Error: Variable anzahl_l hat einen falschen Wert')"
+
+Lesson5_5_Name = "Stringsuche"
+
+

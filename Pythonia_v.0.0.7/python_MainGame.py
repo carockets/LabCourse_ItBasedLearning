@@ -49,16 +49,17 @@ MAXFALLSPEED = 50
 BLOCKWIDTH = 100
 BLOCKHEIGHT = 100
 
-global coin_counter
 coin_counter = 0
+coins_collected = 0
 playerHP = 3
-died_counter = 0
+death_counter = 0
+flag_counter = 0
 
 screen = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), FLAGS)
 pygame.display.set_caption('Pythonia - Learning Python')
 clock = pygame.time.Clock() # We need this for FPS reduction.
-#font = pygame.font.SysFont("Calibri", 30) # Font for ingame text
-#bigfont = pygame.font.SysFont("monospace", 60)
+font = pygame.font.SysFont("Calibri", 30) # Font for ingame text
+bigfont = pygame.font.SysFont("monospace", 60)
 
 
 def loadImage(filename, colorkey=None):
@@ -87,9 +88,13 @@ myimage_coinCounter = loadImage("graphics/coins.png")
 myimage_flagdown = loadImage("graphics/flag_down.png")
 myimage_flagup = loadImage("graphics/flag_up.png")
 myimage_kill= loadImage("graphics/barbs.png")
-myimage_enemy= loadImage("graphics/enemy.png")
+myimage_enemy= loadImage("graphics/enemy1.png")
 myimage_hp = loadImage("graphics/hp.png")
 myimage_heart = loadImage ("graphics/heart.png")
+myimage_endscreen = loadImage ("graphics/endscreen.png")
+myimage_score = loadImage("graphics/score.png")
+
+
 
 ############ COLORSPECTRUM #############
 WHITE = (255, 255, 255)
@@ -125,19 +130,19 @@ level = []
 
 level1 = ['00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
           '06.............3...3...3..............0..................00..................................................0',
-          '0000.........0000000000011.33..11..3...0.................0.........................3........................60',
+          '0000.........00000000000...33......3...0.................0.........................3........................60',
           '0..................0..000000000000000..0.................00.......................000....................3.000',
-          '0......3..3........0.................00033...............00........................00.0.................000000',
+          '0......3..3........0...................033...............00........................00.0.................000000',
           '0....0000000.......0..3..........3.....033...............00....................3...00.0.3............3..000000',
-          '0.....00000000.....000000......0000....0000000...........00...................000..00.0000......3..0000......0',
+          '0.....00000000.....000000......0000..000000000...........00...................000..00.0000......3..0000......0',
           '003..............110.3............3.1110000000003........00.......3...3.....000....00..........00............0',
           '000..............000000000..000000000000......0000.......0.......00..00...3........00......00000.............0',
           '00003..............0.3.............3...0........0000.............00..00..000.......00.....000................0',
           '000000.............0000000000000000000.0............4...........3..................0000011...................0',
-          '00000000000000000......................0..........3.00..........000......00........0000000...................0',
-          '0......3............0003.......3.....3.0..........00000000.....0000...........3....0......................00.0',
+          '00000000000000000..0...................0..........3.00..........000......00........0000000...................0',
+          '0......3...........00003.......3.....3.0..........00000000.....0000...........3....0......................00.0',
           '0..............000000000......0000000000...3...0000000000011111000000011....0000.............3.....3.........0',
-          '0113.............3.00000003...............0000000000000000000000000000001111111111111111111100000000004....4.0',
+          '011.3.............3.00000003...............000000000000000000000000000000111111111111111111110000000000....4.0',
           '00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000']
 
 
@@ -147,33 +152,33 @@ level2 = ['000000000000000000000000000000000000000000000000000000000000000000000
           '0.........................3...00......00000....3...........................................00................0',
           '0.................3.00000000..00..............0000....................................3....00................0',
           '0................000000.......00.....................3...........................3.110000..00................0',
-          '0.........3....0000...........00...................0000.....................3..000000.3....00................0',
-          '0.....300000....00............00.........................3...........3......00000..3..000000000000000........0',
-          '0..000000000....00..3......0000..........................00...............0000.....00000000........00000.....0',
-          '01..............0000011....00............................00..................00.3....3...3......3.....00000000',
-          '000................000011...3........................3..........3..00000......0000000000000000000............0',
-          '0000...00000..........0000000000....................000.........0000..........000000000000000000000.3........0',
-          '0.....000000.3..3........3....00....3.....3.....3.00000.......00..........00000000000000000000000000000......0',
+          '0.........3....0000...........00...................0000.....................3.4000000.3....00................0',
+          '0.....300000....00............00.........................3...........3......00000..3..0000000................0',
+          '0..000000000....00..3......0000..........................00...............0000.....00000000..................0',
+          '01..............0000011....00............................00..................00.3....3...3......3.......000000',
+          '000................000011...3........................3..........3..00000......00000000000000000009...........0',
+          '0000...00000..........0000000000..................9.000.........0000..........000000000000000000000.3........0',
+          '0.....000000.39.3........3....00....3.....3.....3.00000.......00..........00000000000000000000000000000......0',
           '0....0000000000000...........300...000...000....000000......00......3.....0000000000000000000000000000000....0',
-          '0.3......3......60....3.....3.001110001110001111000000....4.00111111....0000000000000000000000000000000000.4.0',
+          '0.3......3......60....3.....3.001110001110001111000000......00111111....0000000000000000000000000000000000.4.0',
           '00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',]
 
 
 level3 = ['00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
           '0000000000000000000000000000000000000000000000...300000000000000000000000000000000000000000000000....3...00000',
           '000000000000000000000000000000000000000000....3...0000000000000000000000000000000000000000000.......000..00000',
-          '000000000000000000000000000000000000003......000..00000000000000000000000000000000..........3.0000000000.3...0',
-          '0000000000000000000000000000000003......00000000..000000000000000000000000000000.3..........000000000000000..0',
-          '000000000000000000000000000........000000000000...00000000000000000000000000........00000000000000000000000..0',
+          '00000000000000000000000000............3......000..00000000000000000000000000000000..........3.0000000000.3...0',
+          '0000000000000000000000000........3......00000000..000000000000000000000000000000.3..........000000000000000..0',
+          '0000000000000000000000000..........000000000000...00000000000000000000000000........00000000000000000000000..0',
           '000............000000000...3.0000000000000...3....00000000000000000000000........0000000000000000000000..3...0',
           '000.3...........0000.....000000000000000....00000.000000000000000000......3..0000000000000000000000000..000000',
           '000................3.0000000000000000.....00000011000000000000000.........0000000000000000000000000000..000000',
           '00011.........30000000000000000......3.0000000000000000000000000.........00000000000000000000000000000.......0',
           '000000000000000000000000000..3...000000000000000000000000000000......11.300000000000000000000000000000.3...4.0',
           '000000000000000000000000000..000000000000000000000000000000......3.0000000000000000000000000000000000000000000',
-          '00000000000000000000000...3..0000000..........00000.3.000...00000000000000000000000000000000000000000000000000',
-          '0000000000000000000......0000000000.....3......0.........3..00000000000000000000000000000000000000000000000000',
-          '0000000000000000000..4.....3...........11...6.....00...0000000000000000000000000000000000000000000000000000000',
+          '00000000000000000.....0...3..0000000..........00000.3.000...00000000000000000000000000000000000000000000000000',
+          '0000000000000000.........0000000000.....3......0.........3..00000000000000000000000000000000000000000000000000',
+          '0000000000000000..........3.......4....11...6.....00...0000000000000000000000000000000000000000000000000000000',
           '00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',]
 
 
@@ -188,7 +193,7 @@ level4 = ['000000000000000000000000000000000000000000000000000000000000000000000
           '0............000000000000000001.....000000000.........3...3..................0000000000000001100.............0',
           '0111111....00000000000........0003................0000000000.............3.0000000000....0000000.............0',
           '00000000000000000000...3....3....00..........00..........000...........0000000000000.....0000000.............0',
-          '00000000000000000.....000..000......3......3..............0003....3.000000000000000..........................0',
+          '00000000000000000.....000..000......3......3..............0003....34000000000000000..........................0',
           '0000000000000000......000110000000000...00000000....00....000011.0000000000000000000.........................0',
           '0.......0000000......000000000.....03...00000000....00....0000000000.........................................0',
           '0.......0000.3...........3.........6.111............00...........00000.......................................0',
@@ -200,15 +205,15 @@ level5 = ['000000000000000000000000000000000000000000000000000000000000000000000
           '0............000..........................00.....................................................3000........0',
           '0............000.........................600.....................................................0000........0',
           '0.3..........000.....................3..0000......................................3.....3.....000000.........0',
-          '0000.........000..................3.00..0000.................................3..000000000000..00.............0',
+          '0000.........000..................3.00.......................................3..000000000000..00.............0',
           '000000.......000.................00.00.....................................000000000..........00.............0',
           '0........3.................3...0000......................................00000000...........3.00.............0',
           '0.......0000.........3...0000............3.......3.........3......3..000000000......3..000000000.............0',
-          '0111....0000........000.................000..00..00.......000...00000000000000.....000000....................0',
-          '00000.3.........3.0000................00000..00..0000............000000000000......00............3...........0',
+          '0111....0000........000................4000..00..00.......000...00000000000000.....000000....................0',
+          '00000.3.........3.0000...............000000..00..0000............000000000000......00............3...........0',
           '00000000........0000.............................000000....3.......00000000..................3..00...3.......0',
           '0000.......3......00............3.000......................00......00000000.........3.......00..00..00.......0',
-          '00.......00000..............3...0000000..3...............000000................000000000.......3...........4.0',
+          '00.......00000..............3...0000000..3............0000000000...............000000000.......3............40',
           '00.3..0000000000.....3......0000000000000011111111110000000000000003........0000000000000001111000011110000000',
           '00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',]
 
@@ -239,6 +244,7 @@ def prepare_level(level_counter):
     global player
     global myimage_wall
     global myimage_wall2
+    global myimage_enemy
     global background_image
 
     levelcounter = level_counter
@@ -251,12 +257,17 @@ def prepare_level(level_counter):
 # Blockwidth, Blockheight, dir(boolean - left for true), enemy_movement, enemy_movementMAX, speed, coord. in the array
         listenemy0 = [14,10,False,0,250,2,0]
         listenemy1 = [8,4,False,0,300,2,1]
-        listenemy2 = [28,2,False,0,250,2,2]
-        listenemies = [listenemy0, listenemy1, listenemy2]
+        listenemy2 = [34, 5, True,0,300,2,2]
+        listenemy3 = [97, 13, False,0,250,2,3]
+        listenemy4 = [70, 12, False,0,300,2,4]
+        listenemies = [listenemy0, listenemy1, listenemy2,listenemy3,listenemy4]
         player = pygame.Rect(10*BLOCKWIDTH, 9*BLOCKHEIGHT, PLAYERSIZE, PLAYERSIZE*2)
         myimage_wall = loadImage("graphics/brick_gras.png")
         myimage_wall2 = loadImage("graphics/brick_gras2.png")
+        myimage_enemy= loadImage("graphics/enemy1.png")
         background_image = loadImage("graphics/background1.png")
+
+
     elif levelcounter == 2:
         LEVELWIDTH = len(level2[0])
         LEVELHEIGHT = len(level2)
@@ -264,15 +275,28 @@ def prepare_level(level_counter):
         player = pygame.Rect(8*BLOCKWIDTH, 10*BLOCKHEIGHT, PLAYERSIZE, PLAYERSIZE*2)
         myimage_wall = loadImage("graphics/brick_beach.png")
         myimage_wall2 = loadImage("graphics/brick_beach2.png")
+        myimage_enemy= loadImage("graphics/enemy2.png")
         background_image = loadImage("graphics/background2.png")
+        listenemy0 = [96, 9, False,0,300,2,0]
+        listenemy1 = [51, 11, False,0,150,2,1]
+        listenemy2 = [14, 12, False,0,200,2,2]
+        listenemies = [listenemy0, listenemy1, listenemy2]
+
+
     elif levelcounter == 3:
         LEVELWIDTH = len(level3[0])
         LEVELHEIGHT = len(level3)
         listenemies = []
         player = pygame.Rect(12*BLOCKWIDTH, 9*BLOCKHEIGHT, PLAYERSIZE, PLAYERSIZE*2)
-        myimage_wall = loadImage("graphics/brick_hill.png")
-        myimage_wall2 = loadImage("graphics/brick_hill2.png")
-        background_image3 = loadImage("graphics/background3.png")
+        myimage_wall = loadImage("graphics/brick_hoehle.png")
+        myimage_wall2 = loadImage("graphics/brick_hoehle2.png")
+        myimage_enemy= loadImage("graphics/enemy3.png")
+        background_image = loadImage("graphics/background3.png")
+        listenemy0 = [33, 5, False,0,300,2,0]
+        listenemy1 = [21, 14, True,0,300,2,1]
+        listenemies = [listenemy0, listenemy1]
+
+
     elif levelcounter == 4:
         LEVELWIDTH = len(level4[0])
         LEVELHEIGHT = len(level4)
@@ -280,7 +304,14 @@ def prepare_level(level_counter):
         player = pygame.Rect(8*BLOCKWIDTH, 9*BLOCKHEIGHT, PLAYERSIZE, PLAYERSIZE*2)
         myimage_wall = loadImage("graphics/brick_snow.png")
         myimage_wall2 = loadImage("graphics/brick_snow2.png")
+        myimage_enemy= loadImage("graphics/enemy4.png")
         background_image = loadImage("graphics/background4.png")
+        listenemy0 = [79, 7, False,0,200,2,0]
+        listenemy1 = [54, 8, True,0,400,2,1]
+        listenemy2 = [18, 14, True,0,300,2,2]
+        listenemies = [listenemy0, listenemy1, listenemy2]
+
+
     elif levelcounter == 5:
         LEVELWIDTH = len(level5[0])
         LEVELHEIGHT = len(level5)
@@ -288,16 +319,36 @@ def prepare_level(level_counter):
         player = pygame.Rect(10*BLOCKWIDTH, 9*BLOCKHEIGHT, PLAYERSIZE, PLAYERSIZE*2)
         myimage_wall = loadImage("graphics/brick_desert.png")
         myimage_wall2 = loadImage("graphics/brick_desert2.png")
+        myimage_enemy= loadImage("graphics/enemy5.png")
         background_image = loadImage("graphics/background5.png")
+        listenemy0 = [28, 7, False,0,300,2,0]
+        listenemy1 = [72, 7, True,0,300,2,1]
+        listenemy2 = [7, 10, True,0,200,2,2]
+        listenemy3 = [58, 12, True,0,350,2,3]
+        listenemy4 = [90, 13, True,0,200,2,4]
+        listenemies = [listenemy0, listenemy1, listenemy2, listenemy3, listenemy4]
+
+
     else:
-        levelcounter = 5
+        levelcounter = 6
         LEVELWIDTH = len(level5[0])
         LEVELHEIGHT = len(level5)
         listenemies = []
         player = pygame.Rect(6*BLOCKWIDTH, 13*BLOCKHEIGHT, PLAYERSIZE, PLAYERSIZE*2)
         myimage_wall = loadImage("graphics/brick_desert.png")
         myimage_wall2 = loadImage("graphics/brick_desert2.png")
+        myimage_enemy= loadImage("graphics/enemy6.png")
         background_image = loadImage("graphics/background5.png")
+        listenemy0 = [28, 7, False,0,200,2,0]
+        listenemy1 = [72, 7, True,0,400,2,1]
+        listenemy2 = [7, 10, True,0,200,2,2]
+        listenemy3 = [58, 12, True,0,350,2,3]
+        listenemy4 = [90, 13, True,0,300,2,4]
+        listenemies = [listenemy0, listenemy1, listenemy2, listenemy3, listenemy4]
+
+
+#[(7, 28), (7, 72), (10, 7), (12, 58), (13, 90)]
+
 
 
 # Prepare Coin for collecting....
@@ -335,8 +386,6 @@ def prepare_level(level_counter):
         map_hearts_Preparation = sethearts(level5)
         map_flags_Preparation = setflags(level5)
 
-
-    print levelcounter
     listcoinlists = map_coin_Preparation[0]
     remaining_coins = map_coin_Preparation[1]
 
@@ -429,6 +478,11 @@ def find_elem_in_2d_coordinates(elem, list2D ):
 
     return result
 
+print find_elem_in_2d_coordinates('9',level5)
+
+
+
+
 
 def textobject (text, font):
     textSurface = font.render(text, True, BLACK)
@@ -438,10 +492,12 @@ def textobject (text, font):
 ######## Render a button with variable parameters ######
 def button(msg, x, y ,w, h, ic, ac, action=None):
     global Music_paused
+    global endgamebool
+    global scorebool
     mouse = pygame.mouse.get_pos()
     click = pygame.mouse.get_pressed()
-
     if x +  w > mouse[0]  > x and y + w > mouse[1] > y: # Mouse coordinates checking.
+         #time.sleep(0.5)
          pygame.draw.rect(screen , ac, (x,y,w,h) ) # mouse is over button (active color)
          if click[0] == 1 and action != None: # Left click
              if action == "music": # only one button implementet yet - music.
@@ -452,7 +508,16 @@ def button(msg, x, y ,w, h, ic, ac, action=None):
                  elif Music_paused == True:
                      pygame.mixer.music.unpause()
                      Music_paused = False
-
+             if action == "endgame_continue":
+                 if endgamebool == True:
+                     endgamebool = False
+                 else:
+                     endgamebool = True
+             if action == "score":
+                 if scorebool == True:
+                    scorebool = False
+                 else:
+                     scorebool = True
     else: # Mouse is not over button, button should still be visible. (in-active color)
          pygame.draw.rect(screen , ic, (x,y,w,h) )
 
@@ -475,6 +540,9 @@ def change_graphic(x,y):
     global level3
     global level4
     global level5
+    global coins_collected
+    global flag_counter
+
 
     if levelcounter == 1:
         level = level1
@@ -505,6 +573,7 @@ def change_graphic(x,y):
             st3 = st2 + "."
             level[x] = st3 + st1[y+1:len(level[0])]
             coin_counter += 1
+            coins_collected +=1
             if Music_paused == True:
                 1+1
             else:
@@ -521,7 +590,8 @@ def change_graphic(x,y):
             st3 = st2 + '5'
             level[x] = st3 + st1[y+1:len(level[0])]
             # Get Variable from other window whether or not Coding was successful, then give coins.
-            coin_counter += 10
+            flag_counter += 1
+            #coin_counter += 10
 
     if test in remaining_hearts:
         remaining_hearts.remove(test)
@@ -662,7 +732,7 @@ def gameprint(text,xx,yy,color,textsize=40, font=pygame.font.get_default_font())
 def dying():
     global player
     global playerHP
-    global died_counter
+    global death_counter
 
     drawText('YOU DIED!', bigfont, RED, screen, 300, 300)
     pygame.display.flip()
@@ -672,7 +742,7 @@ def dying():
 
     #Reset Player HP
     playerHP = 3
-    died_counter += 1
+    death_counter += 1
 
 
 
@@ -697,10 +767,33 @@ def enemymove(xblock, yblock, en_dir_L, enemy_mov, enemy_movementMAX, speed, coo
 
 
 # Communication with the second Window over a textfile. Ugly and not programmer style but... HEY IT WORKS! :D
-def start_communication(number):
+def start_communication(levelcount):
     comm_file = open("communication_file.txt","w") # create new file
-    comm_file.write(str(number)+"\nrunning")
+
+#5,8,10,12,18,
+    if levelcount == 1:
+        number = 0
+        comm_file.write(str(number)+"\nrunning")
+
+    elif levelcount == 2:
+        number = 5
+        comm_file.write(str(number)+"\nrunning")
+
+    elif levelcount == 3:
+        number = 8
+        comm_file.write(str(number)+"\nrunning")
+
+    elif levelcount == 4:
+        number = 10
+        comm_file.write(str(number)+"\nrunning")
+
+    elif levelcount == 5:
+        number = 12
+        comm_file.write(str(number)+"\nrunning")
+
     comm_file.close()
+
+
 
 def check_communication():
     comm_file = open("communication_file.txt","r")
@@ -712,6 +805,8 @@ def check_communication():
             time.sleep(1)
     if communication == "":
         pass
+
+
 
 
 global player
@@ -738,6 +833,11 @@ comm_file = open("communication_file.txt","w") # create new file
 comm_file.write("")
 comm_file.close()
 
+endRect = pygame.Rect(0, 0, 900, 650)
+endgamebool = False
+scorebool = False
+
+
 
 #-------------------------------------------------------------
 # Initializing
@@ -746,7 +846,7 @@ comm_file.close()
 # Background music
 pygame.mixer.music.load('sounds/bgSound1.ogg')
 pygame.mixer.music.set_volume(0.1)
-pygame.mixer.music.play(-1, 0.0) # play in an endless loop
+#pygame.mixer.music.play(-1, 0.0) # play in an endless loop
 # Load level x
 prepare_level(1)
 
@@ -977,6 +1077,8 @@ while True:
     else:
         button("Music on", 810,0,90,30 ,GREEN, LIGHTGREEN , "music")
 
+    button("Score", 810,620,90,30 ,GREEN, LIGHTGREEN , "score")
+
     coinTuple =  listcoins (player.left, player.bottom)
     if isinstance(coinTuple, tuple):
         if coinTuple != (0,0):
@@ -1004,16 +1106,18 @@ while True:
 
     if currentflags != []:
         if remaining_flags != []:
+            start_communication(levelcounter)
             process = subprocess.Popen(["python","python_tk_text.py"],stdin=subprocess.PIPE,stdout=subprocess.PIPE,shell=False, bufsize= 0)
-            start_communication(currentflags[0])
             currentflags.remove(currentflags[0])
         else:
             currentflags.remove(currentflags[0])
             levelcounter+=1
+            if levelcounter == 6:
+                endgamebool = True
             prepare_level(levelcounter)
 
     screen.blit(myimage_coinCounter, pygame.rect.Rect(0,0, 100,38 ))
-#    drawText('%r' %(coin_counter), font, WHITE, screen, 80, 5)
+    drawText('%r' %(coin_counter), font, WHITE, screen, 80, 5)
 
     if playerHP == 1:
         screen.blit(myimage_hp, pygame.rect.Rect(150,0, 37,33 ))
@@ -1024,6 +1128,28 @@ while True:
         screen.blit(myimage_hp, pygame.rect.Rect(150,0, 37,33 ))
         screen.blit(myimage_hp, pygame.rect.Rect(200,0, 37,33 ))
         screen.blit(myimage_hp, pygame.rect.Rect(250,0, 37,33 ))
+
+
+
+    if endgamebool:
+        screen.blit(myimage_endscreen, endRect)
+        drawText('Eingesammelte Muenzen:  %i' %(coins_collected), font, BLACK, screen, 120, 320)
+        drawText('Flaggen erreicht:  %i' %(flag_counter), font, BLACK, screen, 520, 320)
+        drawText('Anzahl Tode:  %i' %(death_counter), font, BLACK, screen, 120, 360)
+        drawText('_____________________________________________', font, RED, screen, 120, 365)
+        drawText('Score:  %i' %(coins_collected+(flag_counter*10)-(death_counter*5)), font, RED, screen, 120, 400)
+        button("Weiter", 810,620,90,30 ,GREEN, LIGHTGREEN , "endgame_continue")
+
+    if scorebool:
+        screen.blit(myimage_score, endRect)
+        drawText('Eingesammelte Muenzen:  %i' %(coins_collected), font, BLACK, screen, 120, 320)
+        drawText('Flaggen erreicht:  %i' %(flag_counter), font, BLACK, screen, 520, 320)
+        drawText('Anzahl Tode:  %i' %(death_counter), font, BLACK, screen, 120, 360)
+        drawText('_____________________________________________', font, RED, screen, 120, 365)
+        drawText('Score:  %i' %(coins_collected+(flag_counter*10)-(death_counter*5)), font, RED, screen, 120, 400)
+        button("Weiter", 810,620,90,30 ,GREEN, LIGHTGREEN , "score")
+
+
 
     pygame.display.flip()
     clock.tick(FPS)

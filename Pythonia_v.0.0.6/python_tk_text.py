@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-import sys
+import pygame, sys
 import StringIO
 from Tkinter import *
-import pygame
+from pygame.locals import *
 
 ########### GAME INITIALIZING ###########
 
